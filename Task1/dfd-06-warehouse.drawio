@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="25.0.3">
+  <diagram name="DFD 6: Учёт ТМЦ" id="dfd-28793">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="&lt;b&gt;DFD 6: Учёт ТМЦ&lt;/b&gt;&lt;div&gt;&lt;font style=&amp;quot;font-size:10px&amp;quot;&gt;DFD с мерами защиты (To-Be) — зелёные блоки&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="700" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="b1" value="&lt;font style=&quot;font-size:11px&quot;&gt;&lt;b&gt;Контур МЕДИКАМЕНТЕ&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size:10px&quot;&gt;[Граница доверия]&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 4;fillColor=none;strokeColor=#b85450;verticalAlign=top;align=left;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="1080" height="600" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="&lt;font style=&quot;font-size:12px&quot;&gt;&lt;b&gt;Склад&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size:10px&quot;&gt;[Внешняя сущность]&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="60" y="300" width="140" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1" value="&lt;font style=&quot;font-size:11px&quot;&gt;&lt;b&gt;1.0&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Учёт ТМЦ
+и закупок&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="300" y="310" width="130" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2" value="&lt;font style=&quot;font-size:11px&quot;&gt;&lt;b&gt;2.0&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Синхронизация
+с бухгалтерией&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="520" y="310" width="130" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="d1" value="&lt;font style=&quot;font-size:11px&quot;&gt;&lt;b&gt;D1 1С Торговля&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size:10px&quot;&gt;[Хранилище]&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="740" y="280" width="170" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="d2" value="&lt;font style=&quot;font-size:11px&quot;&gt;&lt;b&gt;D2 1С Бухгалтерия&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size:10px&quot;&gt;[Хранилище]&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="740" y="400" width="170" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="f1" value="Операции склада" style="endArrow=classic;html=1;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="e1" target="p1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f2" value="ТМЦ, закупки" style="endArrow=classic;html=1;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="p1" target="d1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f3" value="Движение ТМЦ" style="endArrow=classic;html=1;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="p1" target="p2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f4" value="OLE [fin]" style="endArrow=classic;html=1;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="p2" target="d2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1" value="&lt;font style=&quot;font-size:10px;color:#006600&quot;&gt;[Защита] Не хранить ПДн пациентов в 1С Склад&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="200" width="240" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="c2" value="&lt;font style=&quot;font-size:10px;color:#006600&quot;&gt;[Защита] Защищённая интеграция вместо OLE&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="200" width="240" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="c3" value="&lt;font style=&quot;font-size:10px;color:#006600&quot;&gt;[Защита] Data Minimization; аудит&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="200" width="200" height="45" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
