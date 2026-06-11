@@ -1,0 +1,187 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram name="C2 Data Classification Engine" id="c2-data-classification-engine">
+    <mxGraphModel dx="1042" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#333333;" value="&lt;b&gt;C2 Container Diagram: Data Classification Engine перед загрузкой в DWH&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Privacy by Design: classify → tag → protect → route to DWH layer&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="1280" x="260" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 4;fillColor=none;strokeColor=#666666;fontColor=#333333;align=left;verticalAlign=top;spacingTop=8;spacingLeft=12;fontSize=14;" value="&lt;b&gt;Data Classification &amp;amp; Privacy Ingestion Layer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="790" width="920" x="300" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zone-sources" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=top;fontSize=13;" value="&lt;b&gt;Источники данных&lt;/b&gt;" vertex="1">
+          <mxGeometry height="610" width="210" x="30" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="zone-dwh" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=top;fontSize=13;" value="&lt;b&gt;Аналитическое хранилище&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;слои с разным уровнем доступа&lt;/font&gt;" vertex="1">
+          <mxGeometry height="720" width="500" x="1270" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="zone-controls" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=top;fontSize=13;" value="&lt;b&gt;Сервисы управления&lt;/b&gt;" vertex="1">
+          <mxGeometry height="150" width="920" x="300" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="src-crm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;strokeColor=#0D5091;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;CRM&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;пациенты, контакты, согласия&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="55" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="src-mis" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;strokeColor=#0D5091;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;МИС&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;медкарты, диагнозы, назначения&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="55" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="src-1c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;strokeColor=#736782;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;1С / платежи&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;финансы, договоры, HR&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="55" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="src-lab" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;strokeColor=#736782;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Лаборатория&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;результаты анализов&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="55" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="src-files" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;strokeColor=#736782;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Файлы As-Is&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Excel, PDF/JPG, сканы&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="55" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="ingestor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#674ea7;strokeColor=#351c75;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Batch Ingestion Orchestrator&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;расписание, batch id, retry, idempotency&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="240" x="340" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="landing" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#674ea7;strokeColor=#351c75;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Landing Zone&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;immutable copy&lt;br&gt;TTL, encrypted&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="640" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="schema" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#674ea7;strokeColor=#351c75;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Schema Drift Detector&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;новые поля, типы, пропавшие колонки&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="240" x="910" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="profiler" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#674ea7;strokeColor=#351c75;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Data Profiler&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;sample/full scan, regex, cardinality, nulls&lt;/font&gt;" vertex="1">
+          <mxGeometry height="85" width="240" x="340" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="rules" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;strokeColor=#0D5091;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Rules Classifier&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;regex, словари, имена полей&lt;br&gt;СНИЛС, телефон, email, диагноз&lt;/font&gt;" vertex="1">
+          <mxGeometry height="85" width="220" x="640" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ml" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1061B0;strokeColor=#0D5091;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;ML / NLP Classifier&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;новые поля, OCR/текст, вероятностные классы&lt;/font&gt;" vertex="1">
+          <mxGeometry height="85" width="220" x="900" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="classifier" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#674ea7;strokeColor=#351c75;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Classification Decision Engine&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;объединяет правила + ML&lt;br&gt;класс, confidence, risk score&lt;/font&gt;" vertex="1">
+          <mxGeometry height="95" width="260" x="640" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="tagger" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3c8d2f;strokeColor=#2d6a23;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Tagging &amp;amp; Policy Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;pii, pii.sensitive, fin, hr, secrets&lt;br&gt;default deny для unknown&lt;/font&gt;" vertex="1">
+          <mxGeometry height="95" width="230" x="940" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="review" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Human Review Queue&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;низкая уверенность&lt;br&gt;новая схема / высокий риск&lt;/font&gt;" vertex="1">
+          <mxGeometry height="85" width="230" x="340" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="transform" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3c8d2f;strokeColor=#2d6a23;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Privacy Transformation Pipeline&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;masking, tokenization, pseudonymization,&lt;br&gt;k-anonymity, aggregation&lt;/font&gt;" vertex="1">
+          <mxGeometry height="95" width="300" x="640" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="publisher" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3c8d2f;strokeColor=#2d6a23;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Metadata &amp;amp; Lineage Publisher&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;публикует batch lineage,&lt;br&gt;classification events, quality metrics&lt;/font&gt;" vertex="1">
+          <mxGeometry height="95" width="220" x="970" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="dwh-quarantine" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Quarantine Zone&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;unknown / low confidence / secrets&lt;br&gt;ручная проверка&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="200" x="1310" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="dwh-raw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d79b00;strokeColor=#b37b00;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Restricted Raw Zone&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;сырые PII/medical/fin&lt;br&gt;encrypted + ABAC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="200" x="1530" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="dwh-cleansed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d79b00;strokeColor=#b37b00;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Cleansed Zone&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;нормализованные схемы&lt;br&gt;quality checks&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="200" x="1310" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="dwh-protected" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d79b00;strokeColor=#b37b00;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Protected / Anonymized Zone&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;masked, pseudonymized,&lt;br&gt;aggregated&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="200" x="1530" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="dwh-marts" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d79b00;strokeColor=#b37b00;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Analytics Marts / ClickHouse&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;BI/ML только без raw PII&lt;br&gt;internal/anonymized/aggregated&lt;/font&gt;" vertex="1">
+          <mxGeometry height="95" width="220" x="1420" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="analyst" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Бизнес-аналитик / ML&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;доступ только к marts&lt;/font&gt;" vertex="1">
+          <mxGeometry height="75" width="170" x="1450" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="openmetadata" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3c8d2f;strokeColor=#2d6a23;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;OpenMetadata&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;каталог, теги, lineage, owners&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="340" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="opa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3c8d2f;strokeColor=#2d6a23;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;OPA Policy Engine&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;publish rules, deny unknown/PII&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="190" x="580" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="vault" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3c8d2f;strokeColor=#2d6a23;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Vault / KMS&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;keys for encrypted zones&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="170" x="810" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="siem" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3c8d2f;strokeColor=#2d6a23;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=13;" value="&lt;b&gt;Audit / SIEM&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;events, metrics, alerts&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="170" x="1020" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="src-crm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="ingestor" value="batch / CDC / export">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="src-mis" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="ingestor" value="batch / CDC / export">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="src-1c" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="ingestor" value="batch / connector">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="src-lab" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="ingestor" value="API batch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="src-files" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="ingestor" value="files / OCR input">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="ingestor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="landing" value="write immutable batch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="landing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="schema" value="schema + metadata">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="schema" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="profiler" value="profile request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="profiler" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="rules" value="profile">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="profiler" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="ml" value="samples / text">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="rules" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="classifier" value="rule labels">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="ml" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="classifier" value="ML labels + confidence">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="classifier" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#2d6a23;fontColor=#2d6a23;fontSize=10;" target="tagger" value="class + risk score">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="classifier" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#b85450;fontColor=#b85450;fontSize=10;" target="review" value="low confidence / unknown">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#2d6a23;fontColor=#2d6a23;fontSize=10;" target="tagger" value="approved labels">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="tagger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#2d6a23;fontColor=#2d6a23;fontSize=10;" target="transform" value="policy decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="tagger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#2d6a23;fontColor=#2d6a23;fontSize=10;" target="publisher" value="events / lineage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="tagger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#b85450;fontColor=#b85450;fontSize=10;" target="dwh-quarantine" value="unknown / secrets / high risk">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="tagger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#b37b00;fontColor=#b37b00;fontSize=10;" target="dwh-raw" value="raw restricted">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="transform" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#b37b00;fontColor=#b37b00;fontSize=10;" target="dwh-cleansed" value="clean data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="transform" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#b37b00;fontColor=#b37b00;fontSize=10;" target="dwh-protected" value="protected data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="dwh-protected" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#b37b00;fontColor=#b37b00;fontSize=10;" target="dwh-marts" value="publish anonymized marts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e23" edge="1" parent="1" source="analyst" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;fontSize=10;" target="dwh-marts" value="BI / ML queries">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e24" edge="1" parent="1" source="publisher" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#2d6a23;fontColor=#2d6a23;fontSize=10;" target="openmetadata" value="tags + lineage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e25" edge="1" parent="1" source="tagger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#2d6a23;fontColor=#2d6a23;fontSize=10;" target="opa" value="policy check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e26" edge="1" parent="1" source="transform" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#2d6a23;fontColor=#2d6a23;fontSize=10;" target="vault" value="keys / encrypt zones">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e27" edge="1" parent="1" source="publisher" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#2d6a23;fontColor=#2d6a23;fontSize=10;" target="siem" value="metrics / audit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;fontColor=#333333;align=left;verticalAlign=middle;spacing=8;fontSize=12;" value="&lt;b&gt;Правило безопасности&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Новая схема, низкая уверенность, secrets или неизвестные поля не попадают в BI. Они маршрутизируются в Quarantine до ручного решения. Business analytics работает только с Protected/Anonymized Zone и Analytics Marts.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="480" x="1280" y="960" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

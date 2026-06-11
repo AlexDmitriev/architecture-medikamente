@@ -134,23 +134,4 @@ Parallel run позволяет:
 | Пациенты | Информация о запуске ЛК/самозаписи | Сайт, SMS/e-mail | Перед публичным запуском |
 | IT/поддержка | Runbook, контакты, thresholds, rollback | Внутренний канал + runbook | До начала pilot |
 
-## 10. Итоговая схема перехода
-
-```mermaid
-flowchart LR
-    A[Discovery и инвентаризация] --> B[Очистка и mapping данных]
-    B --> C[Тестовая миграция]
-    C --> D[UAT и нагрузочные тесты]
-    D --> E[Pilot Parallel Run]
-    E --> F[Ежедневная сверка]
-    F --> G{Go/No-Go}
-    G -->|No-Go| H[Исправления и повтор pilot]
-    H --> E
-    G -->|Go| I[Freeze Excel read-only]
-    I --> J[Cutover записи и CRM]
-    J --> K[Cutover платежей]
-    K --> L[Cutover лаборатории и медкарт]
-    L --> M[Стабилизация]
-    M --> N[Decommission legacy]
-```
 
